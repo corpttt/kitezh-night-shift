@@ -61,6 +61,14 @@ public:
 private:
     // Поля и приватные методы добавляйте здесь.
     // Публичные сигнатуры выше менять нельзя: тесты собираются против них.
+    int depthNow() const;
+    GateState& gateRef(Gate which);
+
+    Level water_;
+    GateState lower_gate_;
+    GateState upper_gate_;
+    std::vector<Vessel> chamber_;
+    int pumps_done_;
 };
 
 }  // namespace kitezh
